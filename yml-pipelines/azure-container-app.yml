@@ -76,7 +76,7 @@ stages:
     - task: AzureCLI@2
       displayName: Deploy Container App (Staging)
       inputs:
-        azureSubscription: 'Azure-ARM-MLOPS-app'
+        azureSubscription: 'Azure-ARM-app-ai'
         scriptType: bash
         scriptLocation: inlineScript
         inlineScript: |
@@ -129,7 +129,7 @@ stages:
       timeoutInMinutes: 5
       inputs:
         notifyUsers: |
-          cloudmlops@gmail.com
+          cloudmlops7@gmail.com
         instructions: 'Please validate the build configuration and resume'
         onTimeout: 'resume'
 
@@ -145,7 +145,7 @@ stages:
     - task: AzureCLI@2
       displayName: Deploy Container App (Production)
       inputs:
-        azureSubscription: 'Azure-ARM-MLOPS-app'
+        azureSubscription: 'Azure-ARM-app-ai'
         scriptType: bash
         scriptLocation: inlineScript
         inlineScript: |
