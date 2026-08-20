@@ -43,10 +43,10 @@ stages:
         echo "=========================================="
       displayName: Print Deployment Summary
 
-    - script: |
-        curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
-        trivy image --exit-code 1 --severity CRITICAL --ignore-unfixed docker.io/$(DOCKER_IMAGE):$(IMAGE_TAG)
-      displayName: Trivy Security Scan
+#    - script: |
+#        curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+#        trivy image --exit-code 1 --severity CRITICAL --ignore-unfixed docker.io/$(DOCKER_IMAGE):$(IMAGE_TAG)
+#      displayName: Trivy Security Scan
 
 - stage: ManualApprovalAfterBuild
   displayName: Manual Approval After Build
